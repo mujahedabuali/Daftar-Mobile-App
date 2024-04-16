@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_page">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewQuestionNumber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:paddingTop="30dp"
+            android:text="Go ahead and be smart 😁"
+            android:textColor="#F6F3F3"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subjectTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:textColor="#F6F3F3"
+            android:textSize="23dp"
+            android:textStyle="bold|italic" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6F0F0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/panelBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Question 1"
+                    android:textColor="#090000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="Which of the following is NOT a primary data structure in pandas?"
+                    android:textColor="#090000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioQ1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="Series"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="DataFrame"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="Array"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="Panel"
+                        android:textColor="#090000" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/ans1"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:background="@drawable/grey_button_background"
+                    android:text="Answer"
+                    android:textColor="#9C27B0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AnswerInfo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6F0F0">
+
+            <LinearLayout
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/panelBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionNumber2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Question 2"
+                    android:textColor="#090000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="What function is used to read a CSV file into a pandas DataFrame?"
+                    android:textColor="#090000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioQ2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="load_csv()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="read_csv()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="load_data()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="load_file()"
+                        android:textColor="#090000" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/ans2"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:background="@drawable/grey_button_background"
+                    android:text="Answer"
+                    android:textColor="#9C27B0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AnswerInfo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6F0F0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/panelBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionNumber3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Question 3"
+                    android:textColor="#090000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="Which method is used to drop missing values from a DataFrame?"
+                    android:textColor="#090000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioQ3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer123"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="drop_null()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer223"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="remove_null()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer332"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="dropna()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer432"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="remove_missing()"
+                        android:textColor="#090000" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/ans3"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:background="@drawable/grey_button_background"
+                    android:text="Answer"
+                    android:textColor="#9C27B0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AnswerInfo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6F0F0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/panelBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionNumber33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Question 4"
+                    android:textColor="#090000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="How do you select a single column 'A' from a DataFrame df?"
+                    android:textColor="#090000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioQ4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer1243"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="df['A']"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer2243"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="df.select_column('A')"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer3432"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text=" df.column('A')"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer4342"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="df.column_A()"
+                        android:textColor="#090000" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/ans4"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:background="@drawable/grey_button_background"
+                    android:text="Answer"
+                    android:textColor="#9C27B0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AnswerInfo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6F0F0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/panelBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionNumber35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Question 5"
+                    android:textColor="#090000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion253"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="What function is used to merge two DataFrames by a common key?"
+                    android:textColor="#090000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioQ5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer1253"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="combine()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer2253"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="concat()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer3352"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="join()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer4352"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="merge()"
+                        android:textColor="#090000" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/ans5"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:background="@drawable/grey_button_background"
+                    android:text="Answer"
+                    android:textColor="#9C27B0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AnswerInfo5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6F0F0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/panelBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionNumber63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Question 6"
+                    android:textColor="#090000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion263"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="Which of the following is NOT a valid aggregation function in pandas?"
+                    android:textColor="#090000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioQ6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer1263"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="mean()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer2263"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="median()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer3362"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="mode()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer4632"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="variance()"
+                        android:textColor="#090000" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/ans6"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:background="@drawable/grey_button_background"
+                    android:text="Answer"
+                    android:textColor="#9C27B0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AnswerInfo6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#F6F0F0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/panelBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionNumber73"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Question 7"
+                    android:textColor="#090000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewQuestion273"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="What method is used to rename columns in a DataFrame?"
+                    android:textColor="#090000"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioQ7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer1273"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="rename_column()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer2723"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="rename()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer3372"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="change_column_name()"
+                        android:textColor="#090000" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAnswer4372"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#090101"
+                        android:text="modify_column()"
+                        android:textColor="#090000" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/ans7"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:background="@drawable/grey_button_background"
+                    android:text="Answer"
+                    android:textColor="#9C27B0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/AnswerInfo7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:textColor="#4CAF50"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/end_button"
+            style="@android:style/Widget.Button"
+            android:layout_width="155dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/grey_button_background"
+            android:padding="10dp"
+            android:text="End"
+            android:textColor="#EC0505"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

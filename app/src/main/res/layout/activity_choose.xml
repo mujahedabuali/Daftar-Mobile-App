@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background_page" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:gravity="center"
+        android:text="Choose your topic and go! 💨"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="166dp"
+        android:layout_height="457dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.547"
+        app:srcCompat="@drawable/men" />
+
+    <LinearLayout
+        android:layout_width="251dp"
+        android:layout_height="553dp"
+        android:layout_marginTop="52dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.285">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+
+            android:padding="20dp"
+            android:text="Course:"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.619" />
+
+        <Spinner
+            android:id="@+id/spnCourses"
+            android:layout_width="218dp"
+            android:layout_height="118dp"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            android:padding="20dp"
+            android:spinnerMode="dropdown"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView22"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Subject:"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.619" />
+
+        <ListView
+            android:id="@+id/lastView"
+            android:layout_width="218dp"
+            android:layout_height="278dp"
+            android:padding="20dp"
+            android:paddingTop="50dp"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="413dp" />
+
+    </LinearLayout>
+
+    <!--    <Button-->
+<!--        android:id="@+id/doneBttn"-->
+<!--        style="@android:style/Widget.Button"-->
+<!--        android:layout_width="175dp"-->
+<!--        android:layout_height="55dp"-->
+
+<!--        android:background="@drawable/grey_button_background"-->
+<!--        android:text="Done!"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="20sp"-->
+
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView2"-->
+<!--        app:layout_constraintVertical_bias="0.748"-->
+<!--        tools:ignore="HardcodedText" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spnSubjects"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:alwaysDrawnWithCache="false"-->
+<!--        android:animateLayoutChanges="true"-->
+<!--        android:animationCache="true"-->
+<!--        android:textSize="20dp"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/doneBttn"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.843"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/spnCourses"-->
+<!--        app:layout_constraintVertical_bias="0.407" />-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
