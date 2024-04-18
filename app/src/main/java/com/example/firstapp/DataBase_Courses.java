@@ -8,7 +8,7 @@ public class DataBase_Courses {
     private List<Course> courses = new ArrayList<Course>();
 
     public DataBase_Courses() {
-        courses.add(new Course("Data Science", Arrays.asList("Pandas","Numpy")));
+        courses.add(new Course("Data Science", Arrays.asList("Ch1: Pandas","Ch2: Numpy","Ch3: Data Cleaning","Ch4: Misses Value")));
     }
 
     public List<Course> getInitialCourses() {

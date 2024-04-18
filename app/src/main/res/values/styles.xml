@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.FirstApp" parent="Theme.AppCompat.NoActionBar"/>
+    <style name="Theme.FirstApp" parent="Base.Theme.FirstApp" />
+
+    <style name="TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextAppearanceQuiz" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#090000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/grey_button_background</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AnswerButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/grey_button_background</item>
+        <item name="android:textColor">#9C27B0</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+</resources>

@@ -65,13 +65,13 @@
 
                 <TextView
                     android:id="@+id/textViewQuestion"
+                    style="@style/TextAppearanceQuiz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:padding="5dp"
                     android:text="Which of the following is NOT a primary data structure in pandas?"
-                    android:textColor="#090000"
-                    android:textSize="16sp" />
+                    />
 
                 <RadioGroup
                     android:id="@+id/radioQ1"
@@ -114,16 +114,12 @@
 
                 <Button
                     android:id="@+id/ans1"
-                    style="@android:style/Widget.Button"
+                    style="@style/AnswerButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:background="@drawable/grey_button_background"
                     android:text="Answer"
-                    android:textColor="#9C27B0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                   />
 
                 <TextView
                     android:id="@+id/AnswerInfo1"
@@ -168,13 +164,13 @@
 
                 <TextView
                     android:id="@+id/textViewQuestion2"
+                    style="@style/TextAppearanceQuiz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:padding="5dp"
                     android:text="What function is used to read a CSV file into a pandas DataFrame?"
-                    android:textColor="#090000"
-                    android:textSize="16sp" />
+                    />
 
                 <RadioGroup
                     android:id="@+id/radioQ2"
@@ -217,16 +213,11 @@
 
                 <Button
                     android:id="@+id/ans2"
-                    style="@android:style/Widget.Button"
+                    style="@style/AnswerButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:background="@drawable/grey_button_background"
-                    android:text="Answer"
-                    android:textColor="#9C27B0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="Answer"/>
 
                 <TextView
                     android:id="@+id/AnswerInfo2"
@@ -270,13 +261,13 @@
 
                 <TextView
                     android:id="@+id/textViewQuestion23"
+                    style="@style/TextAppearanceQuiz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:padding="5dp"
                     android:text="Which method is used to drop missing values from a DataFrame?"
-                    android:textColor="#090000"
-                    android:textSize="16sp" />
+                   />
 
                 <RadioGroup
                     android:id="@+id/radioQ3"
@@ -319,16 +310,11 @@
 
                 <Button
                     android:id="@+id/ans3"
-                    style="@android:style/Widget.Button"
+                    style="@style/AnswerButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:background="@drawable/grey_button_background"
-                    android:text="Answer"
-                    android:textColor="#9C27B0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="Answer"/>
 
                 <TextView
                     android:id="@+id/AnswerInfo3"
@@ -372,13 +358,13 @@
 
                 <TextView
                     android:id="@+id/textViewQuestion234"
+                    style="@style/TextAppearanceQuiz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:padding="5dp"
                     android:text="How do you select a single column 'A' from a DataFrame df?"
-                    android:textColor="#090000"
-                    android:textSize="16sp" />
+                    />
 
                 <RadioGroup
                     android:id="@+id/radioQ4"
@@ -421,16 +407,11 @@
 
                 <Button
                     android:id="@+id/ans4"
-                    style="@android:style/Widget.Button"
+                    style="@style/AnswerButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:background="@drawable/grey_button_background"
-                    android:text="Answer"
-                    android:textColor="#9C27B0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="Answer"/>
 
                 <TextView
                     android:id="@+id/AnswerInfo4"
@@ -522,16 +503,11 @@
 
                 <Button
                     android:id="@+id/ans5"
-                    style="@android:style/Widget.Button"
+                    style="@style/AnswerButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:background="@drawable/grey_button_background"
-                    android:text="Answer"
-                    android:textColor="#9C27B0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="Answer" />
 
                 <TextView
                     android:id="@+id/AnswerInfo5"
@@ -623,16 +599,11 @@
 
                 <Button
                     android:id="@+id/ans6"
-                    style="@android:style/Widget.Button"
+                    style="@style/AnswerButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:background="@drawable/grey_button_background"
-                    android:text="Answer"
-                    android:textColor="#9C27B0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="Answer"/>
 
                 <TextView
                     android:id="@+id/AnswerInfo6"
@@ -724,16 +695,11 @@
 
                 <Button
                     android:id="@+id/ans7"
-                    style="@android:style/Widget.Button"
+                    style="@style/AnswerButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-
-                    android:background="@drawable/grey_button_background"
-                    android:text="Answer"
-                    android:textColor="#9C27B0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="Answer" />
 
                 <TextView
                     android:id="@+id/AnswerInfo7"

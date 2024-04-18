@@ -1,9 +1,11 @@
 package com.example.firstapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Quizes_Activity extends AppCompatActivity {
@@ -55,6 +58,8 @@ public class Quizes_Activity extends AppCompatActivity {
         selectedItem();
         answersBttn();
         endBttn();
+        loadAnswers();
+        selectedRadio();
     }
 
     // End Button Action
@@ -149,18 +154,246 @@ public class Quizes_Activity extends AppCompatActivity {
 
         ansTxt7.setText(savedInstanceState.getString("result7", ""));
         ansTxt7.setTextColor(savedInstanceState.getInt("result7_color", Color.BLACK));
+    }
 
+    // Display a dialog to prompt the user to save answers
+    @Override
+    public void onBackPressed() {
 
+        new AlertDialog.Builder(this)
+                .setTitle("Save Answers")
+                .setMessage("Do you want to save your answers?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        saveAnswers();
+                        Quizes_Activity.super.onBackPressed();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SharedPreferences preferences = getSharedPreferences("QuizAnswers", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.clear();
+                        editor.apply();
+
+                        SharedPreferences preferences2 = getSharedPreferences("QuizPreferences", MODE_PRIVATE);
+                        SharedPreferences.Editor editor2 = preferences2.edit();
+                        editor2.clear();
+                        editor2.apply();
+
+                        Quizes_Activity.super.onBackPressed();
+                    }
+                })
+                .show();
+    }
+
+    // Save user answers to SharedPreferences
+    private void saveAnswers() {
+        selectedRadio();
+
+        SharedPreferences preferences = getSharedPreferences("QuizAnswers", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+
+        editor.putString("result1", ansTxt1.getText().toString());
+        editor.putInt("result1_color", ansTxt1.getCurrentTextColor());
+
+        editor.putString("result2", ansTxt2.getText().toString());
+        editor.putInt("result2_color", ansTxt2.getCurrentTextColor());
+
+        editor.putString("result3", ansTxt3.getText().toString());
+        editor.putInt("result3_color", ansTxt3.getCurrentTextColor());
+
+        editor.putString("result4", ansTxt4.getText().toString());
+        editor.putInt("result4_color", ansTxt4.getCurrentTextColor());
+
+        editor.putString("result5", ansTxt5.getText().toString());
+        editor.putInt("result5_color", ansTxt5.getCurrentTextColor());
+
+        editor.putString("result6", ansTxt6.getText().toString());
+        editor.putInt("result6_color", ansTxt6.getCurrentTextColor());
+
+        editor.putString("result7", ansTxt7.getText().toString());
+        editor.putInt("result7_color", ansTxt7.getCurrentTextColor());
+
+        editor.apply();
+
+    }
+    private void loadAnswers() {
+        clearAnswer();
+
+        SharedPreferences preferences = getSharedPreferences("QuizAnswers", MODE_PRIVATE);
+
+        ansTxt1.setText(preferences.getString("result1", ""));
+        ansTxt1.setTextColor(preferences.getInt("result1_color", Color.BLACK));
+
+        ansTxt2.setText(preferences.getString("result2", ""));
+        ansTxt2.setTextColor(preferences.getInt("result2_color", Color.BLACK));
+
+        ansTxt3.setText(preferences.getString("result3", ""));
+        ansTxt3.setTextColor(preferences.getInt("result3_color", Color.BLACK));
+
+        ansTxt4.setText(preferences.getString("result4", ""));
+        ansTxt4.setTextColor(preferences.getInt("result4_color", Color.BLACK));
+
+        ansTxt5.setText(preferences.getString("result5", ""));
+        ansTxt5.setTextColor(preferences.getInt("result5_color", Color.BLACK));
+
+        ansTxt6.setText(preferences.getString("result6", ""));
+        ansTxt6.setTextColor(preferences.getInt("result6_color", Color.BLACK));
+
+        ansTxt7.setText(preferences.getString("result7", ""));
+        ansTxt7.setTextColor(preferences.getInt("result7_color", Color.BLACK));
+
+        SharedPreferences preferences2 = getSharedPreferences("QuizPreferences", MODE_PRIVATE);
+
+        int selectedRadioButtonId = preferences2.getInt("selectedRadioButtonId1", -1);
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            selectedRadioButton.setChecked(true);
+        }
+        selectedRadioButtonId = preferences2.getInt("selectedRadioButtonId2", -1);
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            selectedRadioButton.setChecked(true);
+        }
+        selectedRadioButtonId = preferences2.getInt("selectedRadioButtonId3", -1);
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            selectedRadioButton.setChecked(true);
+        }
+        selectedRadioButtonId = preferences2.getInt("selectedRadioButtonId4", -1);
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            selectedRadioButton.setChecked(true);
+        }
+        selectedRadioButtonId = preferences2.getInt("selectedRadioButtonId5", -1);
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            selectedRadioButton.setChecked(true);
+        }
+        selectedRadioButtonId = preferences2.getInt("selectedRadioButtonId6", -1);
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            selectedRadioButton.setChecked(true);
+        }
+        selectedRadioButtonId = preferences2.getInt("selectedRadioButtonId7", -1);
+        if (selectedRadioButtonId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            selectedRadioButton.setChecked(true);
+        }
 
     }
 
+    // for clear answers from actvity
+    private void clearAnswer() {
+
+        ansTxt1.setText("");
+        ansTxt1.setTextColor(Color.BLACK);
+
+        ansTxt2.setText("");
+        ansTxt2.setTextColor( Color.BLACK);
+
+        ansTxt3.setText("");
+        ansTxt3.setTextColor(Color.BLACK);
+
+        ansTxt4.setText("");
+        ansTxt4.setTextColor(Color.BLACK);
+
+        ansTxt5.setText("");
+        ansTxt5.setTextColor(Color.BLACK);
+
+        ansTxt6.setText("");
+        ansTxt6.setTextColor(Color.BLACK);
+
+        ansTxt7.setText("");
+        ansTxt7.setTextColor(Color.BLACK);
+
+
+    }
 
 
     // Setup Subject Name Text
     private void selectedItem() {
         selectedItem = getIntent().getStringExtra("selected_subject");
-        subText.setText("Subject: "+ selectedItem );
+        subText.setText("- "+ selectedItem );
     }
+
+    // Answer Saved Action
+    private void selectedRadio() {
+
+        SharedPreferences preferences = getSharedPreferences("QuizPreferences", MODE_PRIVATE);
+        radio_q1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Save the selected RadioButtons ID to SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("selectedRadioButtonId1", checkedId);
+//                Log.d("MainActivity", String.valueOf(checkedId));
+                System.out.println(checkedId);
+
+
+                editor.apply();
+            }
+        });
+        radio_q2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Save the selected RadioButton's ID to SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("selectedRadioButtonId2", checkedId);
+                editor.apply();
+            }
+        });
+        radio_q3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Save the selected RadioButton's ID to SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("selectedRadioButtonId3", checkedId);
+                editor.apply();
+            }
+        });
+        radio_q4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Save the selected RadioButton's ID to SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("selectedRadioButtonId4", checkedId);
+                editor.apply();
+            }
+        });
+        radio_q5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Save the selected RadioButton's ID to SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("selectedRadioButtonId5", checkedId);
+                editor.apply();
+            }
+        });
+        radio_q6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Save the selected RadioButton's ID to SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("selectedRadioButtonId6", checkedId);
+                editor.apply();
+            }
+        });
+        radio_q7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // Save the selected RadioButton's ID to SharedPreferences
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("selectedRadioButtonId7", checkedId);
+                editor.apply();
+            }
+        });
+    }
+
+
 
     // Answer Buttons Action
     private void answersBttn() {
